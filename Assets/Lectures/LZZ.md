@@ -1,0 +1,71 @@
+# 19CSE201 - Advanced Programming 
+![](https://img.shields.io/badge/Batch-23CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/Subject-AP-blue)
+<br/>
+![](https://img.shields.io/badge/Lecture-2-orange) ![](https://img.shields.io/badge/Practical-3-orange) ![](https://img.shields.io/badge/Credits-3-orange)
+
+![](https://img.shields.io/badge/Date-31_July-blue)
+
+## Introduction to Destructor
+
+Destructor is the special member function that has the same name as the class but is preceded by a tilde (~). Destructors do not take any parameters and do not return any value.
+
+```
+class <<ClassName>> {
+public:
+    // Constructor
+    <<ClassName>>() {
+        // Initialization code
+    }
+
+    // Destructor
+    ~<<ClassName>>() {
+        // Cleanup code
+    }
+};
+```
+
+### Purpose of Destructors
+ - **Resource Cleanup:** Destructors are used to release resources that the object may have acquired during its lifetime. These resources include memory, file handles, and network connections.
+ - **Automatic Invocation:** The destructor is automatically called when an object goes out of scope or is explicitly deleted. This ensures that resources are always released, avoiding resource leaks.
+
+## Function Overloading
+
+Function overloading is a feature of Object Oriented Programming that allows you to define multiple functions with the same name but different parameter lists. 
+This enables you to perform similar operations with different types or numbers of parameters, enhancing code readability and usability.
+
+#### Example
+```
+float draw(float a); //calculates area for circle
+int draw(int a); //calculates area of square
+int draw(int a, int b); //calculates area of rectangle
+```
+
+#### Complete Example
+```
+#include <iostream>
+using namespace std;
+
+class Print {
+public:
+    void display(int i) {
+        cout << "Displaying int: " << i << endl;
+    }
+
+    void display(double f) {
+        cout << "Displaying double: " << f << endl;
+    }
+
+    void display(string s) {
+        cout << "Displaying string: " << s << endl;
+    }
+};
+
+int main() {
+    Print p;
+    p.display(5);       // Calls display(int)
+    p.display(3.14);    // Calls display(double)
+    p.display("Hello"); // Calls display(string)
+
+    return 0;
+}
+```
