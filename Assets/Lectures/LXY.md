@@ -44,3 +44,21 @@ int main() {
     return 0;
 }
 ```
+
+### Exercise
+Please implement the operator overloading function for *.
+
+#### Solution
+```
+ Complex operator*(Complex const &other){
+        return Complex((real*other.real)-(img*other.img), (img*other.real)+(real*other.img));
+    }
+```
+
+## Operators - Cannot be overloaded
+- Conditional or Ternary Operator (?:) 
+- Size of Operator (sizeof)
+- Scope Resolution Operator (::)
+- Class member selector Operator (.)
+- Member pointer selector Operator (.*)
+- Object type Operator (typeid)
