@@ -2,7 +2,8 @@
 ![](https://img.shields.io/badge/Batch-23CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/Subject-AP-blue) <br/>
 ![](https://img.shields.io/badge/Lecture-2-orange) ![](https://img.shields.io/badge/Practical-3-orange) ![](https://img.shields.io/badge/Credits-3-orange)
 
-## Function Overloading Exercise
+## Function Overloading Exercises
+![](https://img.shields.io/badge/Duration-08_Aug_to_15_Aug-blue)
 
 ### Question - 1 
 
@@ -10,13 +11,13 @@
 Create a class ```Matrix``` that represents a 2D matrix. 
 The class should support the following constructors:
 
-- Default Constructor: Initializes a 3x3 matrix with all elements set to zero.
-- Parameterized Constructor: Initializes a matrix of given rows and columns with all elements set to a given value.
-- Constructor from 2D Array: Initializes a matrix from a given 2D array.
+- ```Default Constructor```: Initializes a 3x3 matrix with all elements set to zero.
+- ```Parameterized Constructor```: Initializes a matrix of given rows and columns with all elements set to a given value.
+- ```Constructor from 2D Array```: Initializes a matrix from a given 2D array.
 
 **Instructions:** 
 Write a Program to implement the class with Constructor and below member functions:
-- Print the matrix.
+- ```print```: Print the matrix.
 
 ### Question - 2 
 
@@ -26,9 +27,9 @@ Create a class ```Vector``` that represents a 2D vector. Perform ```dotProduct``
 **Instructions:** 
 Write a Program to implement the class with Constructor and overload the following functions:
 
-- ```dotProduct``` to calculate the dot product of two vectors.
-- ```crossProduct``` to calculate the cross product of two vectors.
-- ```magnitude``` to calculate the magnitude of a vector.
+- ```dotProduct```: to calculate the dot product of two vectors.
+- ```crossProduct```: to calculate the cross product of two vectors.
+- ```magnitude```: to calculate the magnitude of a vector.
 
 **Template**
 ```
@@ -87,6 +88,6 @@ Create a class ```Polynomial``` that represents a polynomial. Perform various op
 
 **Instructions:** 
 Write a Program to implement the class with Constructor and overload the following functions:
-- ```add``` - to add two polynomials.
-- ```subtract```- to subtract one polynomial from another.
-- ```evaluate```- to evaluate the polynomial for a given value of x.
+- ```add```: to add two polynomials.
+- ```subtract```: to subtract one polynomial from another.
+- ```evaluate```: to evaluate the polynomial for a given value of x.
