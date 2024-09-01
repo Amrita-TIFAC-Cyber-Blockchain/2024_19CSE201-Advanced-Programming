@@ -1,7 +1,5 @@
 # 19CSE201 - Advanced Programming 
-![](https://img.shields.io/badge/Batch-23CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/Subject-AP-blue)
-![](https://img.shields.io/badge/-HPOJ-brown) <br/>
-![](https://img.shields.io/badge/Lecture-2-orange) ![](https://img.shields.io/badge/Practical-3-orange) ![](https://img.shields.io/badge/Credits-3-orange)
+![](https://img.shields.io/badge/Batch-23CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/Subject-AP-blue)<br/>
 
 ## LAB1: Class, Object and Constructor
  ![](https://img.shields.io/badge/Date-25_July-blue)
@@ -62,6 +60,6 @@ Define a class WeatherStation with the following private data members:
 In the ```main()``` function, create three WeatherStation objects:
 - One using the default constructor.
 - One using the parameterized constructor with valid values.
-- One using the parameterized constructor with some invalid values (to test validateData()).
+- One using the parameterized constructor with some invalid values (to test ```validateData()```).
 - Call the displayData() function for each object to display the weather data.
 
