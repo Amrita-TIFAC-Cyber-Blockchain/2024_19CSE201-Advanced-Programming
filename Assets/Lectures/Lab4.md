@@ -148,8 +148,8 @@ int main() {
 
     // Adding students to the stack
     studentStack.push(Student("Adarsh R K", 01, 'B'));
-    studentStack.push(Student("Adithya N S", 02, 'A+'));
-    studentStack.push(Student("Agil Prasanna P", 03, 'B+'));
+    studentStack.push(Student("Adithya N S", 02, 'A'));
+    studentStack.push(Student("Agil Prasanna P", 03, 'B'));
 
     // Removing and displaying the top student
     cout << "Removing top student from the stack: " << endl;
