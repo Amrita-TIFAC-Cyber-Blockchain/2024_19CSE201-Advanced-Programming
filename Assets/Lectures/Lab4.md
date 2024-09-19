@@ -9,66 +9,12 @@ The Standard Template Library (STL) defines powerful, template-based, reusable c
 STL extensively uses generic programming based on templates
 
 ### Components of STL
-- Containers: data structures that store objects of any type
-  - Sequence Containers: linear data structures (vector, deque and linked list)
-  - Associative Containers: non-linear containers (set, multiset, map and multimap)
-  - Container Adapters: constrained sequence containers (stack, queue and priority queue)
+- **Containers:** data structures that store objects of any type
+  - **Sequence Containers:** linear data structures (vector, deque and linked list)
+  - **Associative Containers:** non-linear containers (set, multiset, map and multimap)
+  - **Container Adapters:** constrained sequence containers (stack, queue and priority queue)
 - Iterators: used to iterate/manipulate container elements
 - Algorithms: searching, sorting and many others
-
-#### Sequence Container
-They support iterators. 
-
-##### Vector
-
-```
-#include <iostream>
-#include <vector>
-
-using namespace std;
-
-int main() {
-    // Declaration of a vector of integers
-    vector<int> myVector;
-
-    // Add elements to the vector
-    myVector.push_back(10);
-    myVector.push_back(20);
-    myVector.push_back(30);
-
-    // Check if the vector is empty
-    if (myVector.empty()) {
-        cout << "Vector is empty.\n";
-    } else {
-        cout << "Vector is not empty.\n";
-    }
-
-    // Access elements using indexing
-    cout << "First element: " << myVector[0] << "\n";
-
-    // Access elements using iterators
-    cout << "Elements of the vector: ";
-    for (auto it = myVector.begin(); it != myVector.end(); ++it) {
-        cout << *it << " ";
-    }
-    cout << "\n";
-
-    // Size of the vector
-    cout << "Size of the vector: " << myVector.size() << "\n";
-
-    // Clear the vector
-    myVector.clear();
-
-    // Check if the vector is empty after clearing
-    if (myVector.empty()) {
-        cout << "Vector is empty after clearing.\n";
-    } else {
-        cout << "Vector is not empty after clearing.\n";
-    }
-
-    return 0;
-}
-```
 
 #### Container Adapters
 They are implemented using the sequence containers and these do not support iterators. 
@@ -167,7 +113,61 @@ int main() {
     return 0;
 }
 ```
+##### Actual Usage Example
 
+```
+#include <iostream>
+#include <stack>
+#include <string>
+
+using namespace std;
+
+// Define the Student class
+class Student {
+public:
+    string name;
+    int rollNumber;
+    char grade;
+
+    // Constructor
+    Student(string n, int r, char g) {
+        name = n;
+        rollNumber = r;
+        grade = g;
+    }
+
+    // Display function
+    void display() {
+        cout << "Name: " << name << ", Roll Number: " << rollNumber << ", Grade: " << grade << endl;
+    }
+};
+
+int main() {
+    // Stack to store Student objects
+    stack<Student> studentStack;
+
+    // Adding students to the stack
+    studentStack.push(Student("Adarsh R K", 01, 'B'));
+    studentStack.push(Student("Adithya N S", 02, 'A+'));
+    studentStack.push(Student("Agil Prasanna P", 03, 'B+'));
+
+    // Removing and displaying the top student
+    cout << "Removing top student from the stack: " << endl;
+    Student topStudent = studentStack.top();
+    topStudent.display();
+    studentStack.pop();
+
+    // Display remaining students in the stack
+    cout << "\nRemaining students in the stack: " << endl;
+    while (!studentStack.empty()) {
+        Student currentStudent = studentStack.top();
+        currentStudent.display();
+        studentStack.pop();
+    }
+
+    return 0;
+}
+```
 
 
 
